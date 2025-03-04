@@ -1,5 +1,9 @@
 pipeline {
    agent any
+   parameters
+{
+   booleanParam(defaultValue : false, description : "AAA", name : "myBooleanParam")
+}
    stages {
        stage('clean up') {
           steps {
@@ -15,6 +19,11 @@ pipeline {
         stage('jar') {
           steps {
               sh "jar cvfe /tmp/first.jar Temp1 ."
+          }
+        }
+        stage('jar') {
+          steps {
+              echo "My booleanParam is set to : $(params.myBooleanParam)"
           }
         }
      }
