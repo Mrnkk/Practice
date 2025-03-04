@@ -21,7 +21,7 @@ pipeline {
               sh "jar cvfe /tmp/first.jar Temp1 ."
           }
         }
-        stage('jar') {
+        stage('demo') {
           steps {
               echo "My booleanParam is set to : ${params.myBooleanParam}"
           }
