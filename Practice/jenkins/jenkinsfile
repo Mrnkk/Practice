@@ -14,7 +14,7 @@ pipeline {
         }
         stage('jar') {
           steps {
-              sh "jar cvfe /usr/first.jar Temp1 ."
+              sh "jar cvfe /var/first.jar Temp1 ."
           }
         }
      }
