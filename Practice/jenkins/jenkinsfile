@@ -23,7 +23,7 @@ pipeline {
         }
         stage('jar') {
           steps {
-              echo "My booleanParam is set to : $(params.myBooleanParam)"
+              echo "My booleanParam is set to : ${params.myBooleanParam}"
           }
         }
      }
